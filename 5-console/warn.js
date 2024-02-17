@@ -1,4 +1,4 @@
-/ Example program using console.warn()
+// / Example program using console.warn()
 
 // Function to check if a person is eligible to vote
 function checkVotingEligibility(age) {

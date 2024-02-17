@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: aqua;text-align: center;padding-top: 50px; font-size: 22px;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wedzday</div>
+        <div class="day">ThursDay</div>
+    </div>
+</body>
+
+<script>
+    //target one select parent element
+   const parent = document.querySelector('.parent');
+console.log(parent);
+
+    //target Ascess child of parent element
+    // const childElement = document.querySelector('.parent.children');
+
+    console.log(parent.children);
+    //here children is Array like property so we can indexing but not so loops
+    //try indexing
+
+    // console.log(parent.children[0]); // => Monday
+    //after we can also achive its innderHTml
+    console.log(parent.children[0].innerHTML); // => Monday
+
+// perform classic for loop 
+//parent.children  => we are try achieve html Collection which only through children nor parent
+for (let i = 0; i < parent.children.length; i++) {
+    console.log(parent.children[i].innerHTML);
+    
+}
+
+//apply some styling
+//access w/o document/direct parent 
+parent.children[1].style.color = "orange";
+parent.children[1].style.backgroundColor = "red";
+
+
+for (let i = 0; i < parent.children.length; i++) {
+     parent.children[i].style.backgroundColor = "gray";
+    
+}
+
+
+//accessing the parent via chld
+
+const dayOne = document.querySelector('.day');
+
+// console.log(dayOne.parentElement);
+
+// //sibling
+// console.log(dayOne.nextElementSibling.innerText);
+
+
+// //firstElement
+// //lastElemen
+// console.log(parent.firstElementChild);
+// console.log(parent.lastElementChild.innerHTML);
+
+
+//now the outCome of this task :   """"""""""ChildNode""""""""""
+
+
+console.log("Nodes" , parent.childNodes)
+
+//react mein bhot sare Elements memory k andaer dal ke manipulation
+c
+</script>
+</html>

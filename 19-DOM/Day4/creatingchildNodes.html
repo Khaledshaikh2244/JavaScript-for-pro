@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creating child nodes</title>
+</head>
+<body style="background-color: black; color: rgb(255, 247, 98);text-align: center;padding-top: 50px; font-size: 22px;">
+  <script>
+     const div = document.createElement('div');
+     console.log(div);
+
+     // Every Element is a nodeList
+     //so it has all values 
+     // we just need to set it
+
+     div.className = "main";
+     div.id = Math.round(Math.random() *10 + 1);   
+     
+     //creating the custom Attribute
+    div.setAttribute("title", "generated title")
+    //now here we have created the attribute but it shown in page bcoz it is 
+    // memory 
+    // for displaying the attribute it needs to be attached into  document
+    const addText = document.createTextNode("DOM manipulation")
+    div.appendChild(addText);
+
+    document.body.appendChild(div)
+</script>
+</body>
+
+<script>
+
+</script>
+</html>
